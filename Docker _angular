@@ -1,0 +1,20 @@
+$ cat Dockerfile 
+FROM node:latest as node
+RUN mkdir -p /usr/src/app
+RUN chmod -R 777 /usr/src/app
+WORKDIR /usr/src/app
+
+#COPY . .
+
+RUN npm install && npm update -g 
+RUN npm install node-gyp -g
+RUN npm install nodemon -g
+RUN npm run build --prod
+RUN npm start
+EXPOSE 4200
+#Exécusion d'une image
+#nginx
+#FROM nginx:alpine
+#COPY --from=node /app/dist/angularApp /usr/share/nginx/html
+[worker1] (local) root@192.168.0.7 ~/angular
+$ 
