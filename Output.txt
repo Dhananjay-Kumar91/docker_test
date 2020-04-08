@@ -1,0 +1,54 @@
+[worker1] (local) root@192.168.0.7 ~
+$ docker-compose up
+Starting root_angular_1  ... done
+Starting root_database_1 ... done
+Starting root_express_1  ... done
+Attaching to root_database_1, root_angular_1, root_express_1
+database_1  | 2020-04-08T04:39:35.572+0000 I  CONTROL  [main] Automatically disabling TLS 1.0, to force-enable TLS 1.0 specify --sslDisabledProtocols 'none'
+database_1  | 2020-04-08T04:39:35.580+0000 W  ASIO     [main] No TransportLayer configured during NetworkInterface startup
+database_1  | 2020-04-08T04:39:35.580+0000 I  CONTROL  [initandlisten] MongoDB starting : pid=1 port=27017 dbpath=/data/db 64-bit host=b5ef97f26380
+database_1  | 2020-04-08T04:39:35.580+0000 I  CONTROL  [initandlisten] db version v4.2.5
+database_1  | 2020-04-08T04:39:35.580+0000 I  CONTROL  [initandlisten] git version: 2261279b51ea13df08ae708ff278f0679c59dc32
+database_1  | 2020-04-08T04:39:35.580+0000 I  CONTROL  [initandlisten] OpenSSL version: OpenSSL 1.1.1  11 Sep 2018
+database_1  | 2020-04-08T04:39:35.580+0000 I  CONTROL  [initandlisten] allocator: tcmalloc
+database_1  | 2020-04-08T04:39:35.580+0000 I  CONTROL  [initandlisten] modules: none
+database_1  | 2020-04-08T04:39:35.580+0000 I  CONTROL  [initandlisten] build environment:
+database_1  | 2020-04-08T04:39:35.580+0000 I  CONTROL  [initandlisten]     distmod: ubuntu1804
+database_1  | 2020-04-08T04:39:35.580+0000 I  CONTROL  [initandlisten]     distarch: x86_64
+database_1  | 2020-04-08T04:39:35.580+0000 I  CONTROL  [initandlisten]     target_arch: x86_64
+database_1  | 2020-04-08T04:39:35.580+0000 I  CONTROL  [initandlisten] options: { net: { bindIp: "*" } }
+database_1  | 2020-04-08T04:39:35.583+0000 I  STORAGE  [initandlisten] Detected data files in /data/db created by the 'wiredTiger' storage engine, so setting the active storage engine to 'wiredTiger'.
+database_1  | 2020-04-08T04:39:35.584+0000 I  STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=15567M,cache_overflow=(file_max=0M),session_max=33000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000,close_scan_interval=10,close_handle_minimum=250),statistics_log=(wait=0),verbose=[recovery_progress,checkpoint_progress],
+database_1  | 2020-04-08T04:39:36.599+0000 I  STORAGE  [initandlisten] WiredTiger message [1586320776:599506][1:0x7f0cc2c5cb00], txn-recover: Recovering log 1 through 2
+database_1  | 2020-04-08T04:39:36.748+0000 I  STORAGE  [initandlisten] WiredTiger message [1586320776:747981][1:0x7f0cc2c5cb00], txn-recover: Recovering log 2 through 2
+database_1  | 2020-04-08T04:39:36.885+0000 I  STORAGE  [initandlisten] WiredTiger message [1586320776:885690][1:0x7f0cc2c5cb00], txn-recover: Main recovery loop: starting at 1/24320 to 2/256
+database_1  | 2020-04-08T04:39:37.048+0000 I  STORAGE  [initandlisten] WiredTiger message [1586320777:48023][1:0x7f0cc2c5cb00], txn-recover: Recovering log 1 through 2
+database_1  | 2020-04-08T04:39:37.147+0000 I  STORAGE  [initandlisten] WiredTiger message [1586320777:147360][1:0x7f0cc2c5cb00], txn-recover: Recovering log 2 through 2
+express_1   | Lifecycle scripts included in nodejs:
+express_1   |   test
+express_1   |     echo "Error: no test specified" && exit 1
+express_1   |   start
+express_1   |     index.js
+database_1  | 2020-04-08T04:39:37.229+0000 I  STORAGE  [initandlisten] WiredTiger message [1586320777:229317][1:0x7f0cc2c5cb00], txn-recover: Set global recovery timestamp: (0, 0)
+database_1  | 2020-04-08T04:39:37.237+0000 I  RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+database_1  | 2020-04-08T04:39:37.246+0000 I  STORAGE  [initandlisten] Timestamp monitor starting
+database_1  | 2020-04-08T04:39:37.247+0000 I  CONTROL  [initandlisten] 
+database_1  | 2020-04-08T04:39:37.247+0000 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+database_1  | 2020-04-08T04:39:37.247+0000 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+database_1  | 2020-04-08T04:39:37.247+0000 I  CONTROL  [initandlisten] 
+database_1  | 2020-04-08T04:39:37.254+0000 I  SHARDING [initandlisten] Marking collection local.system.replset as collection version: <unsharded>
+database_1  | 2020-04-08T04:39:37.266+0000 I  STORAGE  [initandlisten] Flow Control is enabled on this deployment.
+database_1  | 2020-04-08T04:39:37.266+0000 I  SHARDING [initandlisten] Marking collection admin.system.roles as collection version: <unsharded>
+database_1  | 2020-04-08T04:39:37.266+0000 I  SHARDING [initandlisten] Marking collection admin.system.version as collection version: <unsharded>
+database_1  | 2020-04-08T04:39:37.268+0000 I  SHARDING [initandlisten] Marking collection local.startup_log as collection version: <unsharded>
+database_1  | 2020-04-08T04:39:37.268+0000 I  FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory '/data/db/diagnostic.data'
+database_1  | 2020-04-08T04:39:37.283+0000 I  NETWORK  [listener] Listening on /tmp/mongodb-27017.sock
+database_1  | 2020-04-08T04:39:37.283+0000 I  NETWORK  [listener] Listening on 0.0.0.0
+database_1  | 2020-04-08T04:39:37.283+0000 I  NETWORK  [listener] waiting for connections on port 27017
+database_1  | 2020-04-08T04:39:37.283+0000 I  SHARDING [LogicalSessionCacheRefresh] Marking collection config.system.sessions as collection version: <unsharded>
+database_1  | 2020-04-08T04:39:37.289+0000 I  SHARDING [LogicalSessionCacheReap] Marking collection config.transactions as collection version: <unsharded>
+root_express_1 exited with code 0
+database_1  | 2020-04-08T04:39:38.001+0000 I  SHARDING [ftdc] Marking collection local.oplog.rs as collection version: <unsharded>
+^CGracefully stopping... (press Ctrl+C again to force)
+Stopping root_database_1 ... done
+Stopping root_angular_1  ... done
