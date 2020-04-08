@@ -1,0 +1,11 @@
+$ cat Dockerfile 
+FROM node:latest as node
+#RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
+COPY package.json /usr/src/app
+RUN npm install && npm update -g
+COPY . .
+EXPOSE 3000
+CMD ["npm","run"]
+#ANGULA.JSON IS fed to node docker file here right?
+#yes
